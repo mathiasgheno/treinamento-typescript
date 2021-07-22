@@ -1,10 +1,9 @@
-//@ts-nocheck
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import { buscarUsuario } from '../service/github.service';
 
-export const Github = () => {
-  const [usuario, setUsuario] = useState('');
-  const [dados, setDados] = useState(null);
+export const Github: FC = () => {
+  const [usuario, setUsuario] = useState<string>('');
+  const [dados, setDados] = useState<{login: string} | null>(null);
 
   const handleUsuarioChanges = (event) => {
     setUsuario(event.target.value)

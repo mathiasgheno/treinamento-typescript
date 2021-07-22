@@ -1,25 +1,25 @@
 /**
  * string
  */
-export const meuNome = '';
+export const meuNome: string = '';
 
 /**
  * Numeros
  */
-export const idade = 21;
+export const idade: number = 21;
+
 
 /**
  * Booleans
  */
-export const foraBolsonaro = true;
+export const foraBolsonaro: boolean = true;
 
 /**
  * Arrays de números
  */
-export const numerosPrimos = [2, 3, 5, 7, 11, 13];
+export const numerosPrimos: number[] = [2, 3, 5, 7, 11, 13];
 
 export const nomes = ['mathias', 'gabriel', 'frodo bolseiro'];
-
 
 /**
  * Outros:

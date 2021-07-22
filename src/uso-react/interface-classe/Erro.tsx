@@ -1,7 +1,11 @@
 //@ts-nocheck
 import { Component } from "react";
 
-export class Erro extends Component {
+interface IProps {
+  erro: string,
+}
+
+export class Erro extends Component<IProps> {
   render() {
     return (
       <div>

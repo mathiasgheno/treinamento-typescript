@@ -1,8 +1,16 @@
-//@ts-nocheck
-import { Component } from 'react';
+import {Component, ChangeEventHandler, ChangeEvent} from 'react';
 import { buscarUsuario } from '../service/github.service';
 
-export class Github extends Component {
+interface IDados {
+  login: string
+}
+
+interface IState {
+  usuario: string,
+  dados:  IDados | null,
+}
+
+export class Github extends Component<unknown, IState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,8 +19,8 @@ export class Github extends Component {
     }
   }
 
-  handleUsuarioChanges = (event) => {
-    this.setState({usuario: event.target.value})
+  handleUsuarioChanges = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    this.setState({ usuario: event.target.value })
   }
 
   handleBuscar = () => {

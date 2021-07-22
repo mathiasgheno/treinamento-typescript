@@ -1,18 +1,18 @@
-export const fn0 = function () {
-  return 'fn1'
+export const fn0 = function (valor: string = ''): string {
+  return 'fn0'
 }
 
-export function fn1() {
+export function fn1(): string {
   return 'fn1';
 }
 
-export const fn2 = () => {
+export const fn2 = (): string => {
   return 'fn2';
 }
 
-export function fn3() {
+export function fn3(): string {
 
-  function closure() {
+  function closure(): string {
     return '';
   }
 
@@ -20,19 +20,25 @@ export function fn3() {
 }
 
 export class Funcoes {
-  static fn4() {
+  static fn4(): string {
     return 'fn4';
   }
 }
 
 export const objeto = {
-  fn5() {
+  fn5(): string {
     return 'fn5';
   }
 }
 
 interface IRetorno {
-  fn6: any,
+  fn6(): string,
+}
+
+const obj: IRetorno = {
+  fn6() {
+    return '';
+  }
 }
 
 

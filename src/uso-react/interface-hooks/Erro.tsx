@@ -1,10 +1,14 @@
-//@ts-nocheck
+import {FC} from 'react';
 
-export const Erro = ({ erro }) => {
+interface IProps {
+  erro: string,
+}
+
+export const Erro: FC<IProps> = (props ) => {
   return (
     <div>
       <p>Ocorreu um erro</p>
-      <span>Erro: { erro }</span>
+      <span>Erro: { props.erro }</span>
     </div>
   )
 }
