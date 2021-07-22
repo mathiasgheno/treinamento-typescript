@@ -1,3 +1,7 @@
+export const fn0 = function () {
+  return 'fn1'
+}
+
 export function fn1() {
   return 'fn1';
 }
